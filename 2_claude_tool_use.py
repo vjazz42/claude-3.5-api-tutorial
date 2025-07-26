@@ -22,7 +22,7 @@ def send_message_block(new_message_block: dict, messages_history: list[dict] = [
     messages = messages_history.copy()
     messages.append(new_message_block)
     response = client.messages.create(
-        model="claude-3-5-sonnet-20240620",
+        model="claude-3-5-haiku-20241022",
         max_tokens=1000,
         temperature=0,
         system="You are a coding assistant. Help the user by working closely with the code artifacts (saving new files, loading existing files, etc.).Before answering, explain your reasoning step-by-step in tags.",
